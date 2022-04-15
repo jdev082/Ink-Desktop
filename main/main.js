@@ -2,6 +2,7 @@ const { app, BrowserWindow, dialog } = require("electron");
 const path = require("path");
 const { Menu } = require("electron");
 const ContextMenu = require("electron-context-menu");
+if (require("electron-squirrel-startup")) app.quit();
 
 let mainWindow;
 

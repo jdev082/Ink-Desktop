@@ -34,22 +34,23 @@
     "config": {
         "forge": {
             "packagerConfig": {
-                "icon": "./icons/icon.png"
-            },
-            "publishers": [
-                {
-                    "name": "@electron-forge/publisher-github",
-                    "config": {
-                        "repository": {
-                            "owner": "JaydenDev",
-                            "name": "ink-desktop"
-                        },
-                        "draft": true
-                    }
+                "icon": "./icons/icon",
+                "win32metadata": {
+                    "ProductName": "Ink",
+                    "CompanyName": "Darth-Ness/JaydenDev"
                 }
-            ],
-            "makers": [
-                {
+            },
+            "publishers": [{
+                "name": "@electron-forge/publisher-github",
+                "config": {
+                    "repository": {
+                        "owner": "JaydenDev",
+                        "name": "ink-desktop"
+                    },
+                    "draft": true
+                }
+            }],
+            "makers": [{
                     "name": "@electron-forge/maker-squirrel",
                     "config": {
                         "name": "ink-desktop"
