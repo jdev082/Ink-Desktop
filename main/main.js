@@ -33,7 +33,7 @@ ContextMenu({
             click: () => {
                 browserWindow.webContents.selectAll();
             }
-        }
+        },
     ]
 });
 
@@ -45,7 +45,7 @@ function createWindow() {
             devTools: false
         },
         title: "Ink Desktop",
-        icon: path.join(__dirname, "icons/icon.png"),
+        icon: path.join(__dirname, "../icons/icon.png"),
     });
     mainWindow.loadFile("./Ink/index.html");
 }
@@ -73,12 +73,13 @@ let ver = app.getVersion();
 
 function aboutApp() {
     dialog.showMessageBoxSync({
-        type: "info",
         title: "About Ink Desktop",
-        message: `Catalyst ${ver}`,
+        message: `Ink ${ver}`,
         buttons: ["OK"],
+        icon: './icons/icon.png'
     });
 }
+
 const template = [{
         label: "About",
         click: function() {
@@ -91,7 +92,8 @@ const template = [{
             app.quit();
         }
     }
-]
+];
+
 
 const menu = Menu.buildFromTemplate(template);
 Menu.setApplicationMenu(menu);
