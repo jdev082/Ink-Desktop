@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="home.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body class="overflow-hidden bg-gray-900">
+    <div class="flex justify-center">
+        <div id="area" class="rounded-3xl grid gap-1 grid-cols-6 w-fit my-[25%] h-26 bg-gray-800 m-auto p-1">
+            <button onClick="createBtn()" class="rounded-3xl disabled:hidden bg-gray-900 text-white p-1" disabled>
+                <img src="../assets/icons/plus.png">
+            </button>
+            <a href="https://google.com" class="rounded-3xl bg-gray-900 text-white p-1">
+                <img class="rounded-3xl w-30 h-30" src="../assets/icons/ggl.svg" alt="">
+            </a>
+            <a href="https://aviate.eu.org" class="rounded-3xl bg-gray-900 text-white p-1">
+                <img class="rounded-3xl w-30 h-30" src="../assets/icons/aviate.svg" alt="">
+            </a>
+            <a href="https://scratch.mit.edu" class="rounded-3xl bg-gray-900 text-white p-1">
+                <img class="m-auto rounded-3xl w-30 h-30" src="../assets/icons/scratch.png" alt="">
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
