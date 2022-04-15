@@ -1,6 +1,6 @@
 {
     "name": "ink",
-    "version": "3.5.0",
+    "version": "0.2.1",
     "description": "An Electron HTML/Text editor",
     "main": "main/main.js",
     "private": true,
@@ -40,17 +40,20 @@
                     "CompanyName": "Darth-Ness/JaydenDev"
                 }
             },
-            "publishers": [{
-                "name": "@electron-forge/publisher-github",
-                "config": {
-                    "repository": {
-                        "owner": "JaydenDev",
-                        "name": "ink-desktop"
-                    },
-                    "draft": true
+            "publishers": [
+                {
+                    "name": "@electron-forge/publisher-github",
+                    "config": {
+                        "repository": {
+                            "owner": "JaydenDev",
+                            "name": "ink-desktop"
+                        },
+                        "draft": true
+                    }
                 }
-            }],
-            "makers": [{
+            ],
+            "makers": [
+                {
                     "name": "@electron-forge/maker-squirrel",
                     "config": {
                         "name": "ink-desktop"
