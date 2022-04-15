@@ -69,8 +69,7 @@ app.on("web-contents-created", function(event, contents) {
     }
 });
 
-const pkg = require("./package.json");
-const ver = pkg.version;
+let ver = app.getVersion();
 
 function aboutApp() {
     dialog.showMessageBoxSync({

@@ -2,7 +2,7 @@
     "name": "ink-desktop",
     "version": "0.1.0",
     "description": "A minimal Electron Web Browser",
-    "main": "main",
+    "main": "main/main.js",
     "private": true,
     "scripts": {
         "start": "electron .",
@@ -34,22 +34,19 @@
     "config": {
         "forge": {
             "packagerConfig": {
-                "icon": "./assets/icon-scaled"
+                "icon": "./icons/icon.png"
             },
-            "publishers": [
-                {
-                    "name": "@electron-forge/publisher-github",
-                    "config": {
-                        "repository": {
-                            "owner": "JaydenDev",
-                            "name": "ink-desktop"
-                        },
-                        "draft": true
-                    }
+            "publishers": [{
+                "name": "@electron-forge/publisher-github",
+                "config": {
+                    "repository": {
+                        "owner": "JaydenDev",
+                        "name": "ink-desktop"
+                    },
+                    "draft": true
                 }
-            ],
-            "makers": [
-                {
+            }],
+            "makers": [{
                     "name": "@electron-forge/maker-squirrel",
                     "config": {
                         "name": "ink-desktop"
