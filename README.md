@@ -1,4 +1,4 @@
 # Ink (Desktop Version)
-![image](https://user-images.githubusercontent.com/92550746/163630298-f636bf46-ad4a-4b1e-bebd-06d30d2b20b0.png)
+![image](https://user-images.githubusercontent.com/92550746/165196586-71974f74-cae1-477a-a9c4-bf177bb81b0f.png)
 # Original Project
 [Ink by DarthNess](https://github.com/darth-ness/Ink)
