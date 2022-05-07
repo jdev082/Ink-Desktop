@@ -7,11 +7,25 @@ if (require("electron-squirrel-startup")) app.quit();
 let mainWindow;
 
 ContextMenu({
-    prepend: (defaultActions, params, browserWindow) => [{
+    prepend: (params, browserWindow) => [{
             label: "Cut",
             visible: params.mediaType === "none" && params.isEditable,
             click: () => {
                 browserWindow.webContents.cut();
+            }
+        },
+        {
+            label: "Hide Menu",
+            accelerator: "CmdOrCtrl+H",
+            click: function() {
+                browserWindow.setMenuBarVisibility(false);
+            }
+        },
+        {
+            label: "Show Menu",
+            accelerator: "CmdOrCtrl+S",
+            click: function() {
+                browserWindow.setMenuBarVisibility(true);
             }
         },
         {
@@ -43,12 +57,13 @@ function createWindow() {
         width: 1024,
         height: 768,
         webPreferences: {
-            devTools: false
+            devTools: true
         },
         title: "Ink Desktop",
         icon: path.join(__dirname, "../icons/icon.png"),
     });
     mainWindow.loadFile("./Ink/index.html");
+    mainWindow.setMenuBarVisibility(false)
 }
 
 app.whenReady().then(() => {
@@ -82,17 +97,31 @@ function aboutApp() {
 }
 
 const template = [{
-        label: "About",
-        click: function() {
-            aboutApp();
-        }
-    },
-    {
-        label: "Quit",
-        click: function() {
-            app.quit();
-        }
+    label: "About",
+    click: function() {
+        aboutApp();
     }
+},
+{
+    label: "Quit",
+    click: function() {
+        app.quit();
+    }
+},
+{
+    label: "",
+    accelerator: "CmdOrCtrl+H",
+    click: function() {
+        mainWindow.setMenuBarVisibility(false);
+    }
+},
+{
+    label: "",
+    accelerator: "CmdOrCtrl+S",
+    click: function() {
+        mainWindow.setMenuBarVisibility(true);
+    }
+},
 ];
 
 
