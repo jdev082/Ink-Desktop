@@ -62,7 +62,7 @@ function createWindow() {
         title: "Ink Desktop",
         icon: path.join(__dirname, "../icons/icon.png"),
     });
-    mainWindow.loadFile("./Ink/index.html");
+    mainWindow.loadFile("../Ink/index.html");
     mainWindow.setMenuBarVisibility(false)
 }
 
