@@ -16,6 +16,7 @@ ContextMenu({
         },
         {
             label: "Hide Menu",
+            visible: false,
             accelerator: "CmdOrCtrl+H",
             click: function() {
                 browserWindow.setMenuBarVisibility(false);
@@ -24,6 +25,7 @@ ContextMenu({
         {
             label: "Show Menu",
             accelerator: "CmdOrCtrl+S",
+            visible: false,
             click: function() {
                 browserWindow.setMenuBarVisibility(true);
             }
